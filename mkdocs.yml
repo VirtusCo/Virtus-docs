@@ -10,14 +10,14 @@ theme:
   name: material
   palette:
     - scheme: slate
-      primary: teal
-      accent: cyan
+      primary: black
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
     - scheme: default
-      primary: teal
-      accent: cyan
+      primary: white
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -42,7 +42,7 @@ theme:
     - header.autohide
   icon:
     repo: fontawesome/brands/github
-  logo: assets/favicon.ico
+  logo: assets/logo.png
   favicon: assets/favicon.ico
 
 plugins:
