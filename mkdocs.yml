@@ -1,0 +1,100 @@
+site_name: VirtusCo Docs
+site_url: https://virtusco.github.io/Virtus-docs
+site_description: Documentation for VirtusCo autonomous robotics platform — Porter Robot, VS Code extensions, SDK, and fleet management.
+site_author: VirtusCo
+
+repo_name: VirtusCo/Virtus-docs
+repo_url: https://github.com/VirtusCo/Virtus-docs
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: Fira Code
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/VirtusCo
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/virtusco
+  generator: false
+
+copyright: Copyright &copy; 2025-2026 VirtusCo
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - Hardware Setup: getting-started/hardware.md
+    - Software Setup: getting-started/software.md
+  - Architecture:
+    - System Overview: architecture/system.md
+    - ROS 2 Topics: architecture/topics.md
+    - ESP32 Protocol: architecture/protocol.md
+    - AI Assistant: architecture/ai.md
+  - Extensions:
+    - Extension Suite: extensions/index.md
+    - Firmware Builder: extensions/firmware-builder.md
+    - AI Studio: extensions/ai-studio.md
+    - ROS 2 Studio: extensions/ros2-studio.md
+    - Hardware Dashboard: extensions/hardware-dashboard.md
+    - Simulation Manager: extensions/simulation-manager.md
+    - PCB Studio: extensions/pcb-studio.md
+  - Infrastructure:
+    - SDK: infrastructure/sdk.md
+    - Fleet Backend: infrastructure/fleet.md
+    - Configuration: infrastructure/configs.md
+  - Plans:
+    - Repo Split: plans/repo-split.md
+    - Language Migration: plans/migration.md
+  - Dev Logs: devlogs/index.md
+  - Company: company.md
