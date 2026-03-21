@@ -1,0 +1,103 @@
+/* VirtusCo Docs — Custom Styles */
+
+/* Smooth page transitions */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero section on homepage */
+.md-content h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Card grid styling */
+.grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation tabs */
+.md-tabs {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-tabs__link--active {
+  border-bottom: 2px solid var(--md-accent-fg-color);
+}
+
+/* Code blocks */
+.highlight code {
+  border-radius: 6px;
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-accent-fg-color--transparent);
+  font-weight: 600;
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border-radius: 8px;
+}
+
+/* Footer */
+.md-footer {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Search bar */
+.md-search__input {
+  border-radius: 8px;
+}
+
+/* Sidebar active link */
+.md-nav__link--active {
+  font-weight: 600;
+}
+
+/* Header shadow */
+.md-header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Content max-width for readability */
+.md-content__inner {
+  max-width: 900px;
+}
+
+/* Announcement bar style (if used) */
+.md-banner {
+  background-color: var(--md-accent-fg-color);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links */
+.md-content a:not(.md-button) {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.md-content a:not(.md-button):hover {
+  border-bottom-color: var(--md-accent-fg-color);
+}
