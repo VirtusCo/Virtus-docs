@@ -4,12 +4,6 @@
 .md-header__button.md-logo img {
   height: 34px;
   width: 28px;
-  filter: invert(1) brightness(2);
-}
-
-/* Light mode: keep logo dark */
-[data-md-color-scheme="default"] .md-header__button.md-logo img {
-  filter: none;
 }
 
 /* Smooth page transitions */
@@ -83,9 +77,17 @@ body {
   font-weight: 600;
 }
 
-/* Header — dark navy to match logo's red accent */
+/* Header — silver grey */
 [data-md-color-scheme="slate"] .md-header {
-  background-color: #1a1a2e;
+  background-color: #c0c0c0;
+}
+
+/* Header text dark on silver */
+[data-md-color-scheme="slate"] .md-header__title {
+  color: #1a1a1a;
+}
+[data-md-color-scheme="slate"] .md-header .md-icon {
+  color: #333;
 }
 
 /* Header shadow */
