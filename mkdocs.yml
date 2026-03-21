@@ -29,8 +29,8 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     - navigation.indexes
-    - navigation.sections
     - navigation.top
+    - navigation.path
     - navigation.footer
     - search.suggest
     - search.highlight
@@ -42,8 +42,8 @@ theme:
     - header.autohide
   icon:
     repo: fontawesome/brands/github
-    logo: material/robot-industrial
-  favicon: https://raw.githubusercontent.com/VirtusCo/VirtusCo.github/main/profile/favicon.png
+  logo: assets/favicon.ico
+  favicon: assets/favicon.ico
 
 plugins:
   - search
