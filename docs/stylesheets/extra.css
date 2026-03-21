@@ -2,8 +2,8 @@
 
 /* Logo — invert to white on dark header, proper aspect ratio */
 .md-header__button.md-logo img {
-  height: 28px;
-  width: 32px;
+  height: 32px;
+  width: 28px;
   filter: invert(1) brightness(2);
 }
 
