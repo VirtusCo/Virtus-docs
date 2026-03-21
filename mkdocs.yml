@@ -10,7 +10,7 @@ theme:
   name: material
   palette:
     - scheme: slate
-      primary: custom
+      primary: black
       accent: red
       toggle:
         icon: material/brightness-4
