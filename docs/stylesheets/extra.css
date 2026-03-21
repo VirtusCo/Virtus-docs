@@ -1,5 +1,10 @@
 /* VirtusCo Docs — Custom Styles */
 
+/* Logo size */
+.md-header__button.md-logo img {
+  height: 26px;
+}
+
 /* Smooth page transitions */
 body {
   -webkit-font-smoothing: antialiased;
