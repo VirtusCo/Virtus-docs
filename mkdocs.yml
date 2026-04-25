@@ -44,7 +44,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   logo: assets/Darkmode.png
-  favicon: assets/favicon.ico
+  favicon: assets/Lightmode.png
 
 plugins:
   - search
