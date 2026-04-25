@@ -165,7 +165,7 @@ body { font-family: var(--vc-font); }
    y<50% moves the icon down, y>50% moves it up.
 */
 .md-header__button.md-logo {
-  padding: 0 0.5rem 0 0;
+  padding: 0 4px 0 0;
   margin: 0;
   display: flex;
   flex-shrink: 0;
