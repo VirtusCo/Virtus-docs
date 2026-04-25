@@ -169,30 +169,29 @@ body { font-family: var(--vc-font); }
 .md-header__button.md-logo {
   padding: 0 0.5rem 0 0;
   margin: 0;
-  display: flex;
-  align-items: center;
+  display: block;
   flex-shrink: 0;
   width: 46px;
   height: 46px;
   overflow: hidden;
+  position: relative;
 }
 .md-header__button.md-logo img {
+  position: absolute;
   width: 220px;
   height: 220px;
-  flex-shrink: 0;
-  display: block;
   /* center horizontally: (46 - 220) / 2 = -87px */
-  margin-left: -87px;
-  /* center icon vertically: 23 - 92 = -69px */
-  margin-top: -69px;
+  left: -87px;
+  /* dark logo: icon center at ~42% of 220px = 92px; container center = 23px → top = 23 - 92 = -69px */
+  top: -69px;
 }
 [data-md-color-scheme="default"] .md-header__button.md-logo img {
   content: url('../assets/Lightmode.png');
   width: 220px;
   height: 220px;
-  margin-left: -87px;
-  /* light logo icon center at 38%: 23 - 84 = -61px */
-  margin-top: -61px;
+  left: -87px;
+  /* light logo: icon center at ~38% of 220px = 84px; container center = 23px → top = 23 - 84 = -61px */
+  top: -61px;
 }
 
 /* ====== SEARCH ====== */
