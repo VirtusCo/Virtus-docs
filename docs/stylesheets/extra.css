@@ -157,10 +157,14 @@ body { font-family: var(--vc-font); }
 
 /* ====== LOGO ====== */
 /*
-   Both PNGs have significant canvas whitespace.
-   We use object-fit:cover + object-position to crop to just the icon mark.
-   Darkmode.png  492×492: icon roughly at center-vertical (40-45% from top)
-   Lightmode.png 1063×1063: icon roughly at 37-42% from top
+   Both PNGs have heavy canvas whitespace so object-fit:cover on a
+   same-aspect container shows the whole image (no crop happens).
+   Fix: render the image much larger than the container, clip with
+   overflow:hidden, and use negative margins to center the icon.
+
+   To tune: adjust margin-top (more negative = moves icon UP into view).
+   Darkmode.png  492×492 — rendered at 220px, icon center ≈ 42% → 92px from top
+   Lightmode.png 1063×1063 — rendered at 220px, icon center ≈ 38% → 84px from top
 */
 .md-header__button.md-logo {
   padding: 0 0.5rem 0 0;
@@ -168,21 +172,27 @@ body { font-family: var(--vc-font); }
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
 }
 .md-header__button.md-logo img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: center 42%;
-  display: block;
+  width: 220px;
+  height: 220px;
   flex-shrink: 0;
+  display: block;
+  /* center horizontally: (46 - 220) / 2 = -87px */
+  margin-left: -87px;
+  /* center icon vertically: 23 - 92 = -69px */
+  margin-top: -69px;
 }
 [data-md-color-scheme="default"] .md-header__button.md-logo img {
   content: url('../assets/Lightmode.png');
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: center 38%;
+  width: 220px;
+  height: 220px;
+  margin-left: -87px;
+  /* light logo icon center at 38%: 23 - 84 = -61px */
+  margin-top: -61px;
 }
 
 /* ====== SEARCH ====== */
