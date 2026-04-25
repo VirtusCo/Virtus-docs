@@ -157,41 +157,31 @@ body { font-family: var(--vc-font); }
 
 /* ====== LOGO ====== */
 /*
-   Both PNGs have heavy canvas whitespace so object-fit:cover on a
-   same-aspect container shows the whole image (no crop happens).
-   Fix: render the image much larger than the container, clip with
-   overflow:hidden, and use negative margins to center the icon.
+   background-image approach: avoids all img-tag positioning issues.
+   background-size: 200% zooms the PNG to 2x the container, cropping
+   the heavy canvas whitespace. background-position centers on the icon.
 
-   To tune: adjust margin-top (more negative = moves icon UP into view).
-   Darkmode.png  492×492 — rendered at 220px, icon center ≈ 42% → 92px from top
-   Lightmode.png 1063×1063 — rendered at 220px, icon center ≈ 38% → 84px from top
+   To tune: adjust background-position (x% y%) — x=50% centers horizontally,
+   y<50% moves the icon down, y>50% moves it up.
 */
 .md-header__button.md-logo {
   padding: 0 0.5rem 0 0;
   margin: 0;
-  display: block;
+  display: flex;
   flex-shrink: 0;
-  width: 46px;
-  height: 46px;
-  overflow: hidden;
-  position: relative;
+  width: 36px;
+  height: 36px;
+  background-image: url('../assets/Darkmode.png');
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50% 34%;
 }
 .md-header__button.md-logo img {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  /* center horizontally: (46 - 220) / 2 = -87px */
-  left: -87px;
-  /* dark logo: icon center at ~42% of 220px = 92px; container center = 23px → top = 23 - 92 = -69px */
-  top: -69px;
+  display: none;
 }
-[data-md-color-scheme="default"] .md-header__button.md-logo img {
-  content: url('../assets/Lightmode.png');
-  width: 220px;
-  height: 220px;
-  left: -87px;
-  /* light logo: icon center at ~38% of 220px = 84px; container center = 23px → top = 23 - 84 = -61px */
-  top: -61px;
+[data-md-color-scheme="default"] .md-header__button.md-logo {
+  background-image: url('../assets/Lightmode.png');
+  background-position: 50% 26%;
 }
 
 /* ====== SEARCH ====== */
